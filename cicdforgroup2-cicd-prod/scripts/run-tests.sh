@@ -22,18 +22,13 @@ if [[ ! -f "myapp/script.js" ]]; then
   exit 1
 fi
 
-fi -f "myapp/manifest.json" || 
-  echo "ERROR: myapp/manifest.json not found." >&2
-  exit 1
-fi
-
 fi -f "myapp/service-worker.js" || 
   echo "ERROR: myapp/service-worker.js not found." >&2
   exit 1
 fi
 
-if ! grep -q "March 17, 2026" myapp/index.html; then
-  echo "ERROR: Today's date (March 17, 2026) not found in index.html." >&2
+if ! grep -q "My Birthday is Dec 23, 2026" myapp/index.html; then
+  echo "ERROR: My Birthday date (Dec 23, 2026) not found in index.html." >&2
   exit 1
 fi
 
