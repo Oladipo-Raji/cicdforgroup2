@@ -27,4 +27,9 @@ if ! grep -q "March 17, 2026" myapp/index.html; then
   exit 1
 fi
 
+if ! grep -q "Welcome to my site" myapp/index.html; then
+   echo "ERROR: WELCOME QOUTE IS MISSING." >&2
+   exit 1 
+fi
+
 echo "All required files are present and date check passed."
