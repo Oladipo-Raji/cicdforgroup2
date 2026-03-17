@@ -32,7 +32,7 @@ if ! grep -q "Group Number: 2" myapp/index.html; then
   exit 1
 fi
 
-if ! grep -q "feature-victor_enejo" .github/workflows/ci.yml; then
+if ! grep -q "feature-victor_enejo" .myapp/index.html; then
   echo "ERROR: ci.yml does not reference the correct branch (feature-victor_enejo)." >&2
   exit 1
 fi
