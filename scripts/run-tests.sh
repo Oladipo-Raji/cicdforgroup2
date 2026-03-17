@@ -22,8 +22,18 @@ if [[ ! -f "myapp/script.js" ]]; then
   exit 1
 fi
 
-if ! grep -q "March 15, 2026" myapp/index.html; then
-  echo "ERROR: Today's date (March 15, 2026) not found in index.html." >&2
+if ! grep -q "March 17, 2026" myapp/index.html; then
+  echo "ERROR: Today's date (March 17, 2026) not found in index.html." >&2
+  exit 1
+fi
+
+if ! grep -q "Group Number: 2" myapp/index.html; then
+  echo "ERROR: Group Number not correctly set in index.html." >&2
+  exit 1
+fi
+
+if ! grep -q "feature-victor_enejo" .github/workflows/ci.yml; then
+  echo "ERROR: ci.yml does not reference the correct branch (feature-victor_enejo)." >&2
   exit 1
 fi
 
