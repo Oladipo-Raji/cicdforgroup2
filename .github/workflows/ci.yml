@@ -4,7 +4,7 @@ on:
   push:
     branches: [ feature_VictorEnejo ]
   pull_request:
-    branches: [ cicdforgroup2 ]
+    branches: [ cicd-prod ]
 
 jobs:
   lint:
